@@ -37,7 +37,7 @@ body {
 	body { 
 		/* Set background image POSITION and REPEAT here! */
 		background: #d8d8d8;		
-		background-image: url(gfx/bodyBG.jpg);
+		background-image: url("gfx/bodyBG.jpg");
 		}
 		
 .skinBg { 
@@ -315,7 +315,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fbf9', end
 	}
 	
 #wrapper-footer {
-	background-image:url(gfx/footerBG.jpg);
+	background-image:url("gfx/footerBG.jpg");
 	box-shadow: 0px 5px 5px #000;
 	-webkit-box-shadow: 0px 5px 5px #000;
 	padding: 10px 0px;
@@ -324,7 +324,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fbf9', end
 
 #wrapper-copyright {
 	display:inline-block;
-	background-image:url(gfx/copyrightBG.jpg);
+	background-image:url("gfx/copyrightBG.jpg");
 	padding: 10px 0px;
 	z-index: 5;
 	}
@@ -400,7 +400,7 @@ div.slogan {
 	}
 	div.phone-number-inner {
 		border-radius: 0 5px 5px 0;
-		background: transparent url(gfx/phoneBG.jpg);
+		background: transparent url("gfx/phoneBG.jpg");
 		border: 1px solid #B7CC59;
 		padding: 5px 20px;
 		box-shadow: 3px 2px 3px #000;
@@ -440,7 +440,7 @@ div.phone-number-inner a:hover div {
 	position:relative;
 	padding:5px 0px;
 	border-radius: 5px;
-	background: transparent url(gfx/phoneBG.jpg);
+	background: transparent url("gfx/phoneBG.jpg");
 	border: 1px solid #B7CC59;
 	width:75%;
 	clear:left;
@@ -471,7 +471,7 @@ div.phone-number-inner a:hover div {
 	margin-bottom: 80px; 
 	position:relative;
 	padding-bottom: 10px;
-	background: transparent url(gfx/headImageShadow960.png) bottom center no-repeat scroll;
+	background: transparent url("gfx/headImageShadow960.png") bottom center no-repeat scroll;
 	} /* WP wraps #siteMainDynHeaderImage1 with #header-image-wrapper-1 by defult but removes it once the image is replaced */
 
 img#siteMainDynHeaderImage1 { 
@@ -495,7 +495,7 @@ img#siteMainDynHeaderImage1 {
 			width: 632px;
 		}
 		#header-image-wrapper-1 {
-			background-image:url(gfx/headImageShadow767.png);
+			background-image:url("gfx/headImageShadow767.png");
 			padding-bottom: 7px;	
 		}
 	}
@@ -517,7 +517,7 @@ img#siteMainDynHeaderImage1 {
 			width: 410px;
 		}
 		#header-image-wrapper-1 {
-			background-image:url(gfx/headImageShadow480.png);
+			background-image:url("gfx/headImageShadow480.png");
 			padding-bottom: 2px;	
 		}
 	}
@@ -535,7 +535,7 @@ img#siteMainDynHeaderImage1 {
 			width: 290px;
 		   }
 		   #header-image-wrapper-1 {
-			background-image:url(gfx/headImageShadow320.png);
+			background-image:url("gfx/headImageShadow320.png");
 			padding-bottom: 0px;	
 			}
 		}	
@@ -866,7 +866,7 @@ div#copyright {
 	line-height: 18px;
 	color:#fff;
 	width:95%;
-	background-image:url(gfx/copyrightBG.jpg);
+	background-image:url("gfx/copyrightBG.jpg");
 }
 div#copyright a {
 	color: #97B40D;	
@@ -1669,7 +1669,7 @@ ul#FAQ_category_list span p span {
 */	-webkit-box-shadow:  0px 2px 4px 2px rgba(37, 37, 37, 0.35);
     box-shadow:  0px 2px 4px 2px rgba(37, 37, 37, 0.35);
 	width:100%;
-	background: transparent url(gfx/coverBG2.jpg) no-repeat left top;
+	background: transparent url("gfx/coverBG2.jpg") no-repeat left top;
 	background-size: cover;
 	overflow: hidden;
 }
@@ -1721,12 +1721,12 @@ ul#FAQ_category_list span p span {
 	border: 1px solid;
 }
 .callout1 {
-	background-image: url(gfx/ieCallout1BG.png)\9;
+	background-image: url("gfx/ieCallout1BG.png")\9;
 	background-color: rgba(87, 150, 7, 0.55);
 	border-color: #74a520 #2e4011 #0c1901  #6c8939;
 }
 .callout2 {
-	background-image: url(gfx/ieCallout2BG.png)\9;
+	background-image: url("gfx/ieCallout2BG.png")\9;
 	background-color: rgba(255, 115, 0, 0.55);
 	border-color: #cca631 #170c00 #411f00  #bb9531;
 }
