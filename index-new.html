@@ -20,15 +20,17 @@
 
 <!-- script for scroll to top, IE drop down menu fix, and mobile quick nav link script -->
 <script type="text/javascript" src="gfx/yp-scripts.js"></script>
-
+<!--[if lt IE 9]>
+<script type="text/javascript" src="gfx/coverBG.js"></script>
+<![endif]-->
 <!-- mobile navigation script -->
 <script>
 $(document).ready(function(){
-	$("#navTab").click(function(){
-	  $("#m-menu-content").slideToggle("slow");
-	  $(this).toggleClass("active");
-	  	});
-	});
+    $("#navTab").click(function(){
+      $("#m-menu-content").slideToggle("slow");
+      $(this).toggleClass("active");
+        });
+    });
 </script>
 <!-- end mobile navigation script -->
 
@@ -43,7 +45,7 @@ $(document).ready(function(){
             <a href="tel:{PHONE}" class="m-click-phone"><span>{LANG_CALL_US_M}</span></a>
             <a href="mailto:{EMAIL}" class="m-click-mail"><span>{LANG_SEND_EMAIL_M}</span></a>
             <a href="{CLICK2MAPURL}" class="m-click-map"><span>{CLICK2MAPURL}</span></a>
- 	   </div>      
+       </div>      
 </div> 
 <!-- end mobile cta panel -->
 
@@ -51,29 +53,29 @@ $(document).ready(function(){
 
 <!-- back to top -->
 <p id="back-top">
-		<a href="#top"><span></span>Back to Top</a>
+        <a href="#top"><span></span>Back to Top</a>
 </p>
 <!-- end back to top -->
 
 
 <!-- wrapper menu -->
 <div id="wrapper-menu">
-	<div class="sk-container">
+    <div class="sk-container">
         <div id="logo" class="ten columns">
-            {LOGO}
+            <a href="#">Company Name</a>
         </div><!-- end logo -->
         <div class="sloaganWrap six columns">
-        	<div class="slogan"><{Tagline_1}</div>
+            <div class="slogan"><!-- {Tagline_1} -->Your Slogan Goes Here</div>
         </div>
     </div>
     
     
     <nav id="menu" class="sk-container">
-        	<ul id="nav">
-        		<li class="current first"><a href="#">Home</a>
-                	<ul>
-                    	<li><a href="#">drop 1</a>
-                        	<ul>
+            <ul id="nav">
+                <li class="current first"><a href="#">Home</a>
+                    <ul>
+                        <li><a href="#">drop 1</a>
+                            <ul>
                                 <li><a href="#">drop 2</a></li>
                                 <li><a href="#">drop 2</a></li>
                                 <li><a href="#">drop 2</a></li>
@@ -90,7 +92,7 @@ $(document).ready(function(){
                  
                 </li>
                 <li><a href="#">Services</a></li>
-                <li class="last"><a href="#">Contact Us</a></li>	
+                <li class="last"><a href="#">Contact Us</a></li>    
             </ul>
         </nav><!-- end web nav -->
 </div>
@@ -98,18 +100,18 @@ $(document).ready(function(){
 
 
 <!-- mobile menu -->
-	<nav id="m-menu" >
+    <nav id="m-menu" >
     <!-- mobile menu button -->
              <div id="m-wrapper-menu">
-        		<a id="navTab"></a>  
+                <a id="navTab"></a>  
              </div>  
         <!-- end mobile menu button --> 
-    		<div id="m-menu-content">
-        	<ul id="nav">
-        		<li class="current first"><a href="#">Home</a>
-                	<ul>
-                    	<li><a href="#">drop 1</a>
-                        	<ul>
+            <div id="m-menu-content">
+            <ul id="nav">
+                <li class="current first"><a href="#">Home</a>
+                    <ul>
+                        <li><a href="#">drop 1</a>
+                            <ul>
                                 <li><a href="#">drop 2</a></li>
                                 <li><a href="#">drop 2</a></li>
                             </ul>
@@ -121,15 +123,15 @@ $(document).ready(function(){
                 </li>
                 <li><a href="#">Services</a></li>
                 <li class="last"><a href="#">Contact Us</a>
-                	<ul>
+                    <ul>
                                 <li><a href="#">drop 2</a></li>
                                 <li><a href="#">drop 2</a></li>
                             </ul>
-                </li>	
+                </li>   
             </ul>    
             </div>
               
-	</nav>
+    </nav>
 <!-- end mobile menu -->
 
    
@@ -137,7 +139,7 @@ $(document).ready(function(){
 
 <div id="wrapper-header" class="skinBg"><!-- the skin bg is one of the images that can be swapped out by the user through the UI -->  
 <div id="coverBG">
-	<img src="gfx/coverBG.jpg">
+    
 </div>
     <header id="header" class="sk-container">
         
@@ -145,90 +147,112 @@ $(document).ready(function(){
         <!-- begin mobile phone # -->
             <div id="m-phone-number">
                 <a href="tel:{PHONE}">
-                	<div class="tagline2">{Tagline_2}</div>
-                	<div>{PHONE}</div>
+                    <div class="tagline2"><!-- {Tagline_2} --> Call Now</div>
+                    <div>{PHONE}</div>
                 </a>
             </div> 
         <!-- end mobile phone # --> 
-     	<div id="headerImageContainer" class="fourteen columns offset-by-one">
-     		<div id="header-image-wrapper-1">
-   	    		<img id="siteMainDynHeaderImage1" src="gfx/header_image_1.jpg" >
-        	</div> 
-     		<!-- end header image -->
- 		</div>
+        <div id="headerImageContainer" class="fourteen columns offset-by-two">
+            <div id="header-image-wrapper-1">
+                
+        
+                <img id="siteMainDynHeaderImage1" src="gfx/header_image_1.jpg" >
+            </div> 
+            <!-- end header image -->
+        </div>
         <div id="phone-number">
-        	<div class="phone-number-inner">
-                <div class="tagline2">{Tagline_2}/div>
-                <div>{PHONE}</div>
+            <div class="phone-number-inner">
+                <div class="tagline2"><!-- {Tagline_2} --> Call Now</div>
+                <div>404-555-5555</div>
             </div>
         </div><!-- end phone -->
     </header><!-- end header container -->  
     
       
 </div> <!-- header wrapper end --> <!-- end skin bg -->
-
+ <div id="wrapper-cta"></div>
+ <div id="wrapper-m-cta"></div>
 <!-- content area -->
 <div id="wrapper-content">
-	<div class="sk-container">
-    	
+    <div class="sk-container">
+        
         <section id="content" class="sixteen columns">
-        		<!-- hide for homepage 
-        	        <h2 class="pageTitle">Welcome</h2> -->
+                <!-- hide for homepage 
+                    <h2 class="pageTitle">Welcome</h2> -->
                 <!-- Start Callouts -->
                 
                 <div style="" class="horizontal clearfix callouts"><div style="width: 50%;" class="vertical "><div style="" class="diy-f-spot callout1">
-	<div class="diy-f-spot-inner">
-		<div class="widget-wrapper free-image diy-resizable ">
-	
-	<div class="widget-body">
-	<div style="max-width:100%; float:left;;" class="freetext-image resize-wrapper">
-		<div style="margin:auto; line-height: 0; border: 5px solid #ffffff" class="image_wrapper"><img alt="" style="width:100%;" src="gfx/ctaImg1.jpg"></div>	
-	<p class="figcaption">
-		
-	</p>
+    <div class="diy-f-spot-inner">
+        <div class="widget-wrapper free-image diy-resizable ">
+    
+    <div class="widget-body">
+    <div style="max-width:100%; float:left;;" class="freetext-image resize-wrapper">
+        <div style="margin:auto; line-height: 0; border: 5px solid #ffffff" class="image_wrapper"><img alt="" style="width:100%;" src="gfx/ctaImg1.jpg"></div>  
+    <p class="figcaption">
+        
+    </p>
 </div>
-		<div class="clear"></div>
-	</div>
+        <div class="clear"></div>
+    </div>
 </div><div class="widget-wrapper free-text diy-resizable ">
-	
-	<div class="widget-body">
-	<div class="freetextarea">
-			<h3>Services<br></h3><p><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span></span></p>
-		</div>
-		<div class="clear"></div>
-	</div>
+    
+    <div class="widget-body">
+    <div class="freetextarea">
+            <h3>Services<br></h3><p><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span></span></p>
+        </div>
+        <div class="clear"></div>
+    </div>
 </div>
-		<div class="clear"></div>
-	</div>
+        <div class="clear"></div>
+    </div>
 </div></div>
 <div style="width: 50%;" class="vertical "><div style="" class="diy-f-spot callout2">
-	<div class="diy-f-spot-inner">
-		<div class="widget-wrapper free-image diy-resizable ">
-	
-	<div class="widget-body">
-	<div style="max-width:100%; float:left;;" class="freetext-image resize-wrapper">
-		<div style="margin:auto; line-height: 0; border: 5px solid #ffffff" class="image_wrapper"><img alt="" style="width:100%;" src="gfx/ctaImg2.jpg"></div>	
-	<p class="figcaption">
-		
-	</p>
+    <div class="diy-f-spot-inner">
+        <div class="widget-wrapper free-image diy-resizable ">
+    
+    <div class="widget-body">
+    <div style="max-width:100%; float:left;;" class="freetext-image resize-wrapper">
+        <div style="margin:auto; line-height: 0; border: 5px solid #ffffff" class="image_wrapper"><img alt="" style="width:100%;" src="gfx/ctaImg2.jpg"></div>  
+    <p class="figcaption">
+        
+    </p>
 </div>
-		<div class="clear"></div>
-	</div>
+        <div class="clear"></div>
+    </div>
 </div><div class="widget-wrapper free-text diy-resizable ">
-	
-	<div class="widget-body">
-	<div class="freetextarea">
-			<h3>Contact Us<br></h3><p><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span></span></p>
-		</div>
-		<div class="clear"></div>
-	</div>
+    
+    <div class="widget-body">
+    <div class="freetextarea">
+            <h3>Contact Us<br></h3><p><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span></span></p>
+        </div>
+        <div class="clear"></div>
+    </div>
 </div>
-		<div class="clear"></div>
-	</div>
+        <div class="clear"></div>
+    </div>
 </div></div>
 </div>
                 
                 <!-- end Callouts -->
+               
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(window).resize(function(){
+            var ctaHeight = $('.callouts').height();
+        //  var sidebarM = ctaHeight + 20;
+            var headerHeight = $("#wrapper-header").height();
+        
+            
+            if ( $('#content div.horizontal ').hasClass('callouts') ) {
+                $('#wrapper-cta').css({"height": ctaHeight + "px",}).addClass("wrapper-cta-pos");
+                $('.callouts').css("margin-bottom", "25px");
+            //  $("#wrapper-cta").css("top", headerHeight )
+            }
+            
+        }).trigger("resize").trigger("onload");
+        
+    });
+</script>
                 <div class="horizontal">
                     <div class="eight columns alpha">
                         <h1>This is a header 1</h1>
@@ -239,14 +263,14 @@ $(document).ready(function(){
                         <h6>This is a header 5</h6>
                     </div>
                     <div class="eight columns omega">
-                   		<blockquote>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</blockquote>
+                        <blockquote>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</blockquote>
                     </div>
                     <div class="clear"></div>
                </div>
                <hr>
                <div class="horizontal">
-               		<div class="twelve columns alpha">
-                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem sapien, venenatis quis dictum nec, ultricies in odio. Sed eget lacus sem, id tincidunt purus. Nam rhoncus, enim luctus gravida viverra, nisl eros malesuada nunc, ac ultricies metus velit vel lectus. <a href="#">Curabitur lobortis</a> viverra elementum. Duis sit amet nisi ut lacus posuere molestie et ac odio.</p>
+                    <div class="twelve columns alpha">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem sapien, venenatis quis dictum nec, ultricies in odio. Sed eget lacus sem, id tincidunt purus. Nam rhoncus, enim luctus gravida viverra, nisl eros malesuada nunc, ac ultricies metus velit vel lectus. <a href="#">Curabitur lobortis</a> viverra elementum. Duis sit amet nisi ut lacus posuere molestie et ac odio.</p>
                         <p>Sed mauris magna, consectetur ut mattis vitae, volutpat quis diam. Nulla velit sapien, aliquet sit amet vehicula sit amet, ornare eu orci. Suspendisse nec erat risus, mollis tempus orci. Suspendisse tempus tristique consectetur.</p>
                         <div class="six columns alpha">
                             <ul>
@@ -272,8 +296,8 @@ $(document).ready(function(){
                         <div class="widget-button">Widget Button</div>
                     </div>
                     <div class="four columns omega">
-                   		<form>
-                        	<ul>
+                        <form>
+                            <ul>
                                 <li><label >Name:</label>
                                 <input value="eg John Doe" type="text" /></li>
                                 <li><label>Email:</label>
@@ -309,31 +333,31 @@ $(document).ready(function(){
 
 
 <div id="wrapper-footer">
-	<footer class="sk-container">
+    <footer class="sk-container">
     
         <nav class="sixteen columns">
             <ul id="mirror-menu-module">
                 <li class="first"><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
-                <li class="last"><a href="#">Contact Us</a></li>	
+                <li class="last"><a href="#">Contact Us</a></li>    
             </ul>
         </nav>  <!-- end mirrior menu module -->
         
-     	 <div id="footer-area" class="sixteen columns">
-  			 {FOOTER_DATA}
-		</div>   
+         <div id="footer-area" class="sixteen columns">
+             {FOOTER_DATA}
+        </div>   
         
     </footer>    
 </div>
 <!-- footer end -->
 
 <div id="wrapper-copyright">
-    	<div class="sk-container">
+        <div class="sk-container">
         <script src='/templates/bubbles/templates_YPwebsites/styles/m_c/c0/c04/332/gfx/copyright.js' type='text/javascript'></script>
         </div>
 </div> <!-- wrapper copyright end -->
     
- 
+
 
 <!-- END HTML COPY/PASTE -->
 </body>

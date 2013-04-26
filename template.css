@@ -23,7 +23,10 @@ Updated mobile menu 4/5/2013
 
 header, footer, nav, section, article {display: block;}
 
-
+img#coverBGimg { position: absolute !important; bottom: 0; left: 0; z-index: -10;}
+img#coverBGimg2 { position: absolute !important; top: 0; left: 0; z-index: -10;}
+.bgwidth { width: 100%; height: auto; }
+.bgheight {  height: 100%; width: auto; }
 body {
 	margin: 0;
 	color: #000;
@@ -349,8 +352,8 @@ div#coverBG img {
 #content {
 	padding:0px 0px 15px; 
 	min-height:100px;
-	box-shadow: 0px 0px 36px #666;
-	-webkit-box-shadow: 0px 0px 36px #666;
+	box-shadow: 0 0 48px -18px #000000;
+	-webkit-box-shadow: 0 0 48px -18px #000000;
 }
 
 /* logo */
@@ -389,9 +392,7 @@ div.slogan {
 /* Phone this div must expand. Style with CSS or use the sliding door css technique  */
 /* positioning and box model styling go here */
 #phone-number {
-	
-    left: 10px;
-
+    left: 70px;
     position: absolute;
     top: 48px;
     z-index: 200;
@@ -403,11 +404,13 @@ div.slogan {
 		border: 1px solid #B7CC59;
 		padding: 5px 20px;
 		box-shadow: 3px 2px 3px #000;
+		-webkit-box-shadow: 3px 2px 3px #000;
+		position: relative;
 	}
 	#phone-number:before {
 		border-color: #637B0F #637B0F transparent transparent;
 		border-style: solid;
-		border-width: 21px 0 0 120px;
+		border-width: 21px 0 0 60px;
 		bottom: -21px;
 		content: "";
 		height: 0;
@@ -419,48 +422,55 @@ div.slogan {
 div.phone-number-inner div, 
 div.phone-number-inner a div, 
 div.phone-number-inner a:hover div {
-	font-size: 25px;
-	line-height: 35px;
+	font-size: 24px;
+	line-height: 1.2;
+	font-family: "Avenir Light", Arial, Helvetica, sans-serif;
 	text-align:center;
 	text-transform:uppercase;
-	color:#fff; 
+	color:#226608; 
 	text-decoration:none; 
-	
+	text-shadow: 1px 1px 1px #E4F5BB;
+	-webkit-text-shadow: 1px 1px 1px #E4F5BB;
 }	
 
 
 /* mobile phone number */	
 #m-phone-number {
 	display:none;
-	
 	position:relative;
 	padding:5px 0px;
-	border-radius: 10px;
-	background-color:#666;
+	border-radius: 5px;
+	background: transparent url(gfx/phoneBG.jpg);
+	border: 1px solid #B7CC59;
 	width:75%;
 	clear:left;
 	margin:10px auto;
+	box-shadow: 3px 2px 3px #000;
+	-webkit-box-shadow: 3px 2px 3px #000;
 	}	
 	
 #m-phone-number div,
 #m-phone-number a div,
 #m-phone-number a:hover div {
-	font-size: 25px;
-	line-height: 35px;
+	font-size: 24px;
+	line-height: 1.2;
+	font-family: "Avenir Light", Arial, Helvetica, sans-serif;
 	text-align:center;
 	text-transform:uppercase;
-	color:#fff; 
-	text-decoration:none;
+	color:#226608; 
+	text-decoration:none; 
+	text-shadow: 1px 1px 1px #E4F5BB;
+	-webkit-text-shadow: 1px 1px 1px #E4F5BB;
 }	
 
 /* header image */
 #header-image-container {}
 
 #header-image-wrapper-1 {
-	margin-top: 20px; 
-	margin-bottom: 90px; 
+	margin-top: 10px; 
+	margin-bottom: 80px; 
 	position:relative;
-	padding-bottom: 11px;
+	padding-bottom: 10px;
 	background: transparent url(gfx/headImageShadow960.png) bottom center no-repeat scroll;
 	} /* WP wraps #siteMainDynHeaderImage1 with #header-image-wrapper-1 by defult but removes it once the image is replaced */
 
@@ -477,19 +487,40 @@ img#siteMainDynHeaderImage1 {
     @media only screen and (max-width: 959px) {}
 
     /* Tablet Portrait size to standard 960 (devices and browsers) */
-    @media only screen and (min-width: 768px) and (max-width: 959px) {}
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+		#phone-number{
+			left: 46px;	
+		}
+		img#siteMainDynHeaderImage1 {
+			width: 632px;
+		}
+		#header-image-wrapper-1 {
+			background-image:url(gfx/headImageShadow767.png);
+			padding-bottom: 7px;	
+		}
+	}
 
     /* All Mobile Sizes (devices and browser) */
     @media only screen and (max-width: 767px) {
 			#phone-number { text-align:center;}
 			#logo { text-align:center;}
+			img#siteMainDynHeaderImage1 {
+				border-width: 5px;	
+			}
 		}
 
     /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
     @media only screen and (min-width: 480px) and (max-width: 767px) {	
-			#phone-number { display:none;}
-			#m-phone-number { display:block;}	
+		#phone-number { display:none;}
+		#m-phone-number { display:block;}	
+		img#siteMainDynHeaderImage1 {
+			width: 410px;
 		}
+		#header-image-wrapper-1 {
+			background-image:url(gfx/headImageShadow480.png);
+			padding-bottom: 2px;	
+		}
+	}
 
     /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
     @media only screen and (max-width: 479px) { 
@@ -500,6 +531,13 @@ img#siteMainDynHeaderImage1 {
 			
 		  #phone-number { display:none;}	
 		  #m-phone-number { display:block;}	
+		  img#siteMainDynHeaderImage1 {
+			width: 290px;
+		   }
+		   #header-image-wrapper-1 {
+			background-image:url(gfx/headImageShadow320.png);
+			padding-bottom: 0px;	
+			}
 		}	
 
 
@@ -507,7 +545,8 @@ img#siteMainDynHeaderImage1 {
 
 #footer-area {
 	padding:10px 0px;
-	
+	color: #fff;
+	font-size:10px;
 }
 
 
@@ -644,6 +683,7 @@ ul#nav {
 		   display:inline-block;
 		   width:100%;
 		   text-align:center;
+		   background: #3b3b3b;
 		   background: -moz-linear-gradient( 		top, 		#a3a3a3 0%, 		#3b3b3b 50%, 		#242424 50%, 		#000000);
 			background: -webkit-gradient( 		linear, left top, left bottom, 		from(#a3a3a3), 		color-stop(0.50, #3b3b3b), 		color-stop(0.50, #242424), 		to(#000000));
 			-moz-box-shadow: 		0px 1px 3px rgba(000,000,000,0.5), 		inset 0px 0px 1px rgba(255,255,255,0.6);
@@ -788,12 +828,12 @@ ul#nav {
 
 /* mirror module for utility nav */
 ul#mirror-menu-module {
-	margin: 5px auto;
-	padding: 5px 0 30px;
+	margin: 0px auto;
+	padding: 0;
 	clear: both;
 	position: relative; 
 	z-index: 0; 
-	font-size:12px;
+
 	text-align:center;
 	font-weight:normal;
 	}
@@ -808,6 +848,7 @@ ul#mirror-menu-module {
 	ul#mirror-menu-module a:visited {
 		color:#97b40d;
 		text-decoration:none; 
+		font-size: 10px;
 		}
 		ul#mirror-menu-module a:hover {
 			text-decoration: underline;
@@ -827,7 +868,9 @@ div#copyright {
 	width:95%;
 	background-image:url(gfx/copyrightBG.jpg);
 }
-
+div#copyright a {
+	color: #97B40D;	
+}
 div#copyright br {
 	display:none;
 	}
@@ -868,14 +911,76 @@ div#copyright br {
      }			
 
 /* 10 b. Form Styling */
-
-label {}
+input[type="text"], 
+input[type="password"], 
+input[type="email"], 
+textarea {
+	width: 95%;
+}
+select {
+	width: 100%;	
+}
+@media only screen and (max-width: 767px) {
+	select {
+		width: 98%;	
+	}
+}
+label {
+	color; #333333;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.astrix {
+	color: #fff;	
+}
 input[type="text"] {}
 input[type="text"]:focus {} 
 select {}
 select option {}
 textarea {}
-input[type="submit"] {}
+input[type="submit"], input[type="reset"] {
+	min-width:48%; 
+	margin: 0 5px 10px 0;
+	height:auto; 
+	text-align:center;  
+	z-index:1001;
+	-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+	line-height: 40px;
+	color: #226608;
+    font-family: "Avenir Light",Arial,Helvetica,sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #E4F5BB;
+	-webkit-text-shadow: 1px 1px 1px #E4F5BB;
+    text-transform: uppercase;
+	background: url("gfx/phoneBG.jpg") repeat scroll 0 0 transparent;
+    border: 1px solid #B7CC59;
+    box-shadow: 3px 3px 3px -2px #444;
+	-webkit-box-shadow: 3px 3px 3px -2px #444;
+	padding: 0 10px;
+	max-width: 95%;
+}
+	
+input[type="submit"]:hover, input[type="reset"]:hover,
+input[type="submit"]:active, input[type="reset"]:active{
+	cursor:pointer;
+	border-color: #226608;
+	color: #55993a;
+}
+input[type="text"], input[type="password"], input[type="email"], textarea {
+    width: 92%;
+}
+select {
+    width: 96%;
+}
+@media only screen and (max-width: 767px) {
+	select {width: 93%;}
+}
+@media only screen and (max-width: 479px) {
+	select {width: 95%;}
+}
 
 /* ----- Websplanet widget form classes ----- */
 .calculator-btn { /* match input[type=submit] styling */ }
@@ -999,20 +1104,31 @@ div.unit-calc li.unit-menu ul.unit-type li a:hover {
     display:inherit;
 }
 .widget-button{
-	width:100%; 
+	width:auto; 
 	height:auto; 
 	text-align:center;  
 	z-index:1001;
-	-moz-border-radius:10px;
-    -webkit-border-radius:10px;
-    border-radius:10px;
-	background-color: #999;
+	-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
 	line-height: 40px;
-	}
+	color: #226608;
+    font-family: "Avenir Light",Arial,Helvetica,sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #E4F5BB;
+	-webkit-text-shadow: 1px 1px 1px #E4F5BB;
+    text-transform: uppercase;
+	background: url("gfx/phoneBG.jpg") repeat scroll 0 0 transparent;
+    border: 1px solid #B7CC59;
+    box-shadow: 3px 3px 3px -2px #444;
+	-webkit-box-shadow: 3px 3px 3px -2px #444;
+}
 	
 div.widget-button:hover{
 	cursor:pointer;
-	background-color:#C60;
+	border-color: #226608;
+	color: #55993a;
 	}
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -1123,6 +1239,7 @@ a.m-click-phone, a.m-click-mail, a.m-click-map {
 	color: #ffffff;
 	padding: 0px 0px;
 	text-align:center;
+	background: #3b3b3b;
 	/* this is the background of quick nav. please do not add left and right borders. They will mess up the widths of the buttons and will not display correctly. */
 	background: -moz-linear-gradient( 		top, 		#a3a3a3 0%, 		#3b3b3b 50%, 		#242424 50%, 		#000000);
 	background: -webkit-gradient( 		linear, left top, left bottom, 		from(#a3a3a3), 		color-stop(0.50, #3b3b3b), 		color-stop(0.50, #242424), 		to(#000000));
@@ -1226,7 +1343,7 @@ a.websplanet {
 	font-size: 13px; /*match a, a:visited { styling } */
 	line-height: 16px;
 	margin-bottom: 21px;
-	display: inline-block;
+	display: inline;
 }
 
 /* iframe has height of 0px but makes container div taller than the button */
@@ -1242,14 +1359,14 @@ iframe#Guesbook_csiframe {
 /* RSS widget styling --- rss feed widget styeling, typography is completely different */
 .rss-item-title a {
 	font: 20px; /* match h4 styling */
-	color: #2D71E6; /* match link color */
+
 }
 div.rss ul {
     padding: 0;
 }
 
 div[type=rss_widget] > div.widget-body > div { /* match h3 styling; requires !important */
-	font: 28px/28px "Avenir Regular", Helvetica, Arial, sans-serif !important;
+	font: 24px/24px "Avenir Regular", Helvetica, Arial, sans-serif !important;
 	
 }
 div[type=rss_widget] ul { /* remove indent; requires !important */
@@ -1264,8 +1381,9 @@ div[type=rss_widget] ul { /* remove indent; requires !important */
 
 /* accordion and tabs break grid, this adds a margin to match other "widget-wrapper"s */
 div.diy-f-accordion,
-div.diy-f-tabs {
-	margin: 7px;
+div.diy-f-tabs,
+div.diy-f-spot {
+	margin: 10px 15px;
 }
 /* Accordian fixes */
 .diy-f-accordion h3 {
@@ -1460,26 +1578,32 @@ div.Events_item {
 }
 #FAQ_category_list li a,
 #FAQ_category_list li a:visited {
-    background-color: red; /* replace with theme color */
-    border-radius: 10px 10px 10px 10px;
-    font-family: "Century Gothic",Verdana,arial,sans-serif; /* replace with theme fonts */
-    font-size: 21px;
-    height: auto;
-    line-height: 40px;
-    text-align: center;
-    width: auto;
-    z-index: 1001;
-    color: #fff;
-    border: none;
+    width:100%; 
+	height:auto; 
+	text-align:center;  
+	z-index:1001;
+	-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+	line-height: 40px;
+	color: #226608;
+    font-family: "Avenir Light",Arial,Helvetica,sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #E4F5BB;
+	-webkit-text-shadow: 1px 1px 1px #E4F5BB;
+    text-transform: uppercase;
+	background: url("gfx/phoneBG.jpg") repeat scroll 0 0 transparent;
+    border: 1px solid #B7CC59;
+    box-shadow: 3px 3px 3px -2px #444;
+	-webkit-box-shadow: 3px 3px 3px -2px #444;
 }
 #FAQ_category_list li a:hover,
 #FAQ_category_list li a:focus,
 #FAQ_category_list li a:active {
 	cursor:pointer;
-	box-shadow: 0 0 10px #000000 inset;
-	-webkit-box-shadow: 0 0 10px #000000 inset;
-	background: red; /* replace with theme color */
-    filter: progid:DXImageTransform.Microsoft.gradient( enabled=false );
+	border-color: #226608;
+	color: #55993a;
 }
 ul#FAQ_category_list span {
 	margin: 0 12px 24px;
@@ -1491,20 +1615,7 @@ div#jobs-module ul {
     margin: 0;
     padding: 0;
 }
-/* for sites with dark backgrounds, the job desciption text gets lost as it is inline styled to be a dark color by default  */
-div.jobs-desc {
-     /*
-	background-color: #fff;
-	background-color: rgba(255,255,255, .75);
-	*/
-	}
-	
-ul#FAQ_category_list span p {
-	/* padding: 10px;
-	background-color: #fff;
-	background-color: rgba(255,255,255, .75);
-	*/
-	}
+
 	
 ul#FAQ_category_list span p span {
 	/* margin: 0; */
@@ -1516,10 +1627,10 @@ ul#FAQ_category_list span p span {
 .jobs-title:hover {
     background: none;
     border: none;
-        font-family: "Century Gothic",Verdana,arial,sans-serif; /* replace with theme fonts */
+        font-family: "Avenir Light", Arial, Helvetica, sans-serif; /* replace with theme fonts */
         font-size: 24px;
         padding-left: 0px;
-        color: #E40A0A; /* replace with theme color */
+        color: #474f11; /* replace with theme color */
 }
 .jobs-title a:hover,
 .jobs-title a:focus,
@@ -1528,35 +1639,113 @@ ul#FAQ_category_list span p span {
 }
 
 .jobs-apply a {
-    background-color: #E40A0A; /* replace with theme color */
-    border-radius: 10px 10px 10px 10px;
-    font-family: "Century Gothic",Verdana,arial,sans-serif;/* replace with theme fonts */
-    font-size: 16px;
+    background-color: #226608; /* replace with theme color */
+    border-radius: 5px;
+	-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    font-family: "Avenir Light",Arial,Helvetica,sans-serif;/* replace with theme fonts */
+    font-size: 24px;
     height: auto;
     line-height: 40px;
     text-align: center;
     width: 100%;
     z-index: 1001;
-    color: #fff;
-    border: none;
+    color: #226608;
+    border: 1px solid #B7CC59;
 }
 .jobs-apply a:hover,
 .jobs-apply a:active,
 .jobs-apply a:focus {
     cursor:pointer;
-	box-shadow: 0 0 10px #000000 inset;
-	-webkit-box-shadow: 0 0 10px #000000 inset;
-	background: #E40A0A; /* replace with theme color */
+	border-color: #226608;
+	color: #55993a;
 }
 
 /* --------------- end Websplanet module fixes --------------- */
 .vertical { float: left; }
 /* --------------- Default Site Callout Classes --------------- */
+#wrapper-cta, #wrapper-m-cta {
+/*	background-color: #555;	
+*/	-webkit-box-shadow:  0px 2px 4px 2px rgba(37, 37, 37, 0.35);
+    box-shadow:  0px 2px 4px 2px rgba(37, 37, 37, 0.35);
+	width:100%;
+	background: transparent url(gfx/coverBG2.jpg) no-repeat left top;
+	background-size: cover;
+	overflow: hidden;
+}
+	
+.wrapper-cta-pos	{
+	position:absolute !important;
+	padding:0px 0px 0px;
+	left:0px;
+
+	}
+#wrapper-m-cta {
+	display:none;
+	position:relative;
+	min-height:45px;
+	z-index:400;
+	text-align:center;
+	}
+.wrapper-cta-pos-no	{
+	position:relative;
+	min-height:45px;
+	z-index:400;
+}
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+		  
+  }
+    @media only screen and (max-width: 767px) { 
+		
+	}
+	@media only screen and (max-width: 767px) {
+		#wrapper-cta {display:none}
+		#wrapper-m-cta {
+			display:block;
+			}	
+	}
+.callouts {
+	
+}
+.callouts h3 {
+	text-shadow: 1px 1px 2px #000;
+	-webkit-text-shadow: 1px 1px 2px #000;
+	text-align: center;
+}
+.callouts .image_wrapper {
+	box-shadow: 0px 0px 15px -2px #000;	
+	-webkit-box-shadow: 0px 0px 15px -2px #000;	
+}
+.callout1, .callout2 {
+	padding: 15px 0 0;	
+	border: 1px solid;
+}
+.callout1 {
+	background-image: url(gfx/ieCallout1BG.png)\9;
+	background-color: rgba(87, 150, 7, 0.55);
+	border-color: #74a520 #2e4011 #0c1901  #6c8939;
+}
+.callout2 {
+	background-image: url(gfx/ieCallout2BG.png)\9;
+	background-color: rgba(255, 115, 0, 0.55);
+	border-color: #cca631 #170c00 #411f00  #bb9531;
+}
+@media only screen and (max-width: 767px) {
+	.callouts h3 {
+		font-size: 24px;	
+	}
+}
+div.horizontal.callouts div.vertical div.diy-f-spot.callout1 div.diy-f-spot-inner div.widget-wrapper *,
+div.horizontal.callouts div.vertical div.diy-f-spot.callout2 div.diy-f-spot-inner div.widget-wrapper * {
+	color: #fff;
+}
 div.horizontal.callouts div.vertical div.diy-f-spot.callout1 div.diy-f-spot-inner div.widget-wrapper,
 div.horizontal.callouts div.vertical div.diy-f-spot.callout2 div.diy-f-spot-inner div.widget-wrapper {
 /*	width:45% !important;
 	float:left !important;
 	margin-right: 0 !important; */
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
 }	
 	 
 @media screen and (max-width: 767px) {
@@ -1565,5 +1754,12 @@ div.horizontal.callouts div.vertical div.diy-f-spot.callout2 div.diy-f-spot-inne
 		width:auto !important;
 		float:left !important;
 		margin-right: 15px !important;
+		color: #fff;
 	}
+}
+@media only screen and (max-width: 479px) {
+	div.horizontal.callouts div.vertical {
+		float: none;
+		width: 100% !important;
+	}	
 }
