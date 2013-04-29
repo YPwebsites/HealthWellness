@@ -21,19 +21,33 @@
 <!-- script for scroll to top, IE drop down menu fix, and mobile quick nav link script -->
 <script type="text/javascript" src="gfx/yp-scripts.js"></script>
 <!--[if lt IE 9]>
-<script type="text/javascript" src="gfx/coverBG.js"></script>
+<script type="text/javascript" src="gfx/healthWellnessCoverBg.js"></script>
 <![endif]-->
 <!-- mobile navigation script -->
-<script>
+<script type="text/javascript">
 $(document).ready(function(){
-    $("#navTab").click(function(){
-      $("#m-menu-content").slideToggle("slow");
-      $(this).toggleClass("active");
-        });
-    });
+	$("#navTab").click(function(){
+		$("#m-menu-content").slideToggle("slow");
+		$(this).toggleClass("active");
+	});
+});
+$(document).ready(function() {
+	$(window).resize(function(){
+		var ctaHeight = $('.callouts').height();
+	//  var sidebarM = ctaHeight + 20;
+		var headerHeight = $("#wrapper-header").height();
+
+		if ( $('#content div.horizontal ').hasClass('callouts') ) {
+			$('#wrapper-cta').css({"height": ctaHeight + "px",}).addClass("wrapper-cta-pos");
+			$('.callouts').css("margin-bottom", "25px");
+		//  $("#wrapper-cta").css("top", headerHeight )
+		}
+		
+	}).trigger("resize").trigger("onload");
+	
+});
 </script>
 <!-- end mobile navigation script -->
-
 </head>
 
  
@@ -91,6 +105,7 @@ $(document).ready(function(){
                     </ul>
                  
                 </li>
+                
                 <li><a href="#">Services</a></li>
                 <li class="last"><a href="#">Contact Us</a></li>    
             </ul>
@@ -137,10 +152,7 @@ $(document).ready(function(){
    
 <!-- header -->
 
-<div id="wrapper-header" class="skinBg"><!-- the skin bg is one of the images that can be swapped out by the user through the UI -->  
-<div id="coverBG">
-    
-</div>
+<div id="wrapper-header" class="skinBg" style="background-size: cover;"><!-- the skin bg is one of the images that can be swapped out by the user through the UI -->  
     <header id="header" class="sk-container">
         
        
@@ -235,24 +247,7 @@ $(document).ready(function(){
                 
                 <!-- end Callouts -->
                
-<script type="text/javascript">
-    $(document).ready(function() {
-        $(window).resize(function(){
-            var ctaHeight = $('.callouts').height();
-        //  var sidebarM = ctaHeight + 20;
-            var headerHeight = $("#wrapper-header").height();
-        
-            
-            if ( $('#content div.horizontal ').hasClass('callouts') ) {
-                $('#wrapper-cta').css({"height": ctaHeight + "px",}).addClass("wrapper-cta-pos");
-                $('.callouts').css("margin-bottom", "25px");
-            //  $("#wrapper-cta").css("top", headerHeight )
-            }
-            
-        }).trigger("resize").trigger("onload");
-        
-    });
-</script>
+
                 <div class="horizontal">
                     <div class="eight columns alpha">
                         <h1>This is a header 1</h1>
