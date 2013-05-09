@@ -1,24 +1,29 @@
-/*YP Horizontal Framework B v1 - 4/4/2013
+/*
+Health and Wellness Template - v2
+Design by Marc Benejan, Design Finalizationa dn Development by Conor Kelly
+ck7630@yp.com
+
+YP Horizontal Framework B v1 - 4/4/2013
 fixed calculators and typography 
 MODULE STYLING added 4/4/2013
 Updated mobile menu 4/5/2013
  */
 
-@import url("gfx/wp-skeleton.css"); 
+@import url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/wp-skeleton.css"); 
 
 @font-face {
 	font-family: "Avenir Regular";
-	src: url("gfx/aer____.ttf"),
-		 url("gfx/aero___.ttf"),
-		 url("gfx/aer____.eot"),
-		 url("gfx/aero___.eot");
+	src: url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/aer____.ttf"),
+		 url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/aero___.ttf"),
+		 url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/aer____.eot"),
+		 url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/aero___.eot");
 }
 @font-face {
 	font-family: "Avenir Light";
-	src: url("gfx/ael____.ttf"),
-		 url("gfx/aelo___.ttf"),
-		 url("gfx/ael____.eot"),
-		 url("gfx/aelo___.eot");
+	src: url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/ael____.ttf"),
+		 url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/aelo___.ttf"),
+		 url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/ael____.eot"),
+		 url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/aelo___.eot");
 }
 
 header, footer, nav, section, article {display: block;}
@@ -37,11 +42,11 @@ body {
 	body { 
 		/* Set background image POSITION and REPEAT here! */
 		background: #d8d8d8;		
-		background-image: url("gfx/bodyBG.jpg");
+		background-image: url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/bodyBG.jpg");
 		}
 		
 .skinBg { 
-	background-image:url("gfx/coverBG.jpg");
+	background-image:url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/coverBG.jpg");
 	background-position: center bottom;
 	background-size: cover;
 	margin-top: -2px;
@@ -49,45 +54,44 @@ body {
 		
 /* 2.HEADINGS */
 
-h1, h1 span, h1 font span,
-h2, h2 span, h2 font span, 
-h3, h3 span, h3 font span, 
-h4, h4 span, h4 font span, 
-h5, h5 span, h5 font span, 
-h6, h6 span, h6 font span
- {
+h1, h1 span, h1 font span, h1 div,
+h2, h2 span, h2 font span, h2 div,
+h3, h3 span, h3 font span, h3 div,
+h4, h4 span, h4 font span, h4 div,
+h5, h5 span, h5 font span, h5 div,
+h6, h6 span, h6 font span, h6 div {
 	font-weight:normal;
 	margin-bottom : 8px;
 	line-height: 120%;
 	color: #474f11;
 	}
 
-h1, h1 span, h1 font span { 
+h1, h1 span, h1 font span, h1 div { 
 	font-size : 34px; 
 	font-family: "Avenir Light", Arial, Helvetica, sans-serif;
 	}
 
-h2, h2 span, h2 font span{ 	
+h2, h2 span, h2 font span, h2 div { 	
 	font-size : 30px; 
 	font-family: "Avenir Light", Arial, Helvetica, sans-serif;
 	}
 
-h3, h3 span, h3 font span {	
+h3, h3 span, h3 font span, h3 div {	
 	font-size : 28px; 
 	font-family: "Avenir Light", Arial, Helvetica, sans-serif;
 	}
 
-h4, h4 span, h4 font span { 	
+h4, h4 span, h4 font span, h4 div { 	
 	font-size : 24px; 
 	 font-family: "Avenir Light", Arial, Helvetica, sans-serif;
 	}
 
-h5, h5 span, h5 font span { 
+h5, h5 span, h5 font span, h5 div { 
 	font-size : 20px;  
 
 	}
 
-h6, h6 span, h6 font span { 
+h6, h6 span, h6 font span, h6 div { 
 	font-size : 16px; 
 	}
 
@@ -199,12 +203,18 @@ blockquote  {
 	margin : 0 0 16px 24px; 
 	padding-left : 24px; 
 	border-left : 2px solid #474F11; /* hex code can be used here too */
-	font-style : italic; 
-	color: #474f11;
-	font-size: 18px;
-	font-weight: bold;
+	
 	}
-
+blockquote,
+blockquote div,
+blockquote p  {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style : italic; 
+	color: #637B0F;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1.2;
+}
 blockquote:before, 
 blockquote:after, 
 q:before, 
@@ -315,7 +325,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fbf9', end
 	}
 	
 #wrapper-footer {
-	background-image:url("gfx/footerBG.jpg");
+	background-image:url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/footerBG.jpg");
 	box-shadow: 0px 5px 5px #000;
 	-webkit-box-shadow: 0px 5px 5px #000;
 	padding: 10px 0px;
@@ -324,7 +334,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fbf9', end
 
 #wrapper-copyright {
 	display:inline-block;
-	background-image:url("gfx/copyrightBG.jpg");
+	background-image:url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/copyrightBG.jpg");
 	padding: 10px 0px;
 	z-index: 5;
 	}
@@ -377,7 +387,7 @@ div#coverBG img {
 div.sloaganWrap {
 	padding: 10px 0px;	
 }
-div.slogan {
+div.slogan, div.slogan div {
 	font-family: "Avenir Light", Arial, Helvetica, sans-serif;
 	font-size: 24px;
 	line-height: 1.1;
@@ -400,7 +410,7 @@ div.slogan {
 	}
 	div.phone-number-inner {
 		border-radius: 0 5px 5px 0;
-		background: transparent url("gfx/phoneBG.jpg");
+		background: transparent url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/phoneBG.jpg");
 		border: 1px solid #B7CC59;
 		padding: 5px 20px;
 		box-shadow: 3px 2px 3px #000;
@@ -440,11 +450,11 @@ div.phone-number-inner a:hover div {
 	position:relative;
 	padding:5px 0px;
 	border-radius: 5px;
-	background: transparent url("gfx/phoneBG.jpg");
+	background: transparent url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/phoneBG.jpg");
 	border: 1px solid #B7CC59;
 	width:75%;
 	clear:left;
-	margin:10px auto;
+	margin:0px auto 5px;
 	box-shadow: 3px 2px 3px #000;
 	-webkit-box-shadow: 3px 2px 3px #000;
 	}	
@@ -465,19 +475,21 @@ div.phone-number-inner a:hover div {
 
 /* header image */
 #header-image-container {}
-
+div.wrapper {
+	
+}
 #header-image-wrapper-1 {
 	margin-top: 10px; 
 	margin-bottom: 80px; 
 	position:relative;
 	padding-bottom: 10px;
-	background: transparent url("gfx/headImageShadow960.png") bottom center no-repeat scroll;
+	background: transparent url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/headImageShadow960.png") bottom center no-repeat scroll;
 	} /* WP wraps #siteMainDynHeaderImage1 with #header-image-wrapper-1 by defult but removes it once the image is replaced */
 
 img#siteMainDynHeaderImage1 { 
 	width: 800px;
 	height:auto;
-	border: 10px solid #ffffff;
+	border: 10px solid #ffffff !important;
 }
 
 
@@ -495,7 +507,7 @@ img#siteMainDynHeaderImage1 {
 			width: 632px;
 		}
 		#header-image-wrapper-1 {
-			background-image:url("gfx/headImageShadow767.png");
+			background-image:url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/headImageShadow767.png");
 			padding-bottom: 7px;	
 		}
 	}
@@ -507,17 +519,21 @@ img#siteMainDynHeaderImage1 {
 			img#siteMainDynHeaderImage1 {
 				border-width: 5px;	
 			}
+			#wrapper-header {
+				padding-top: 10px;
+			}
 		}
 
     /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
     @media only screen and (min-width: 480px) and (max-width: 767px) {	
 		#phone-number { display:none;}
 		#m-phone-number { display:block;}	
+		
 		img#siteMainDynHeaderImage1 {
 			width: 410px;
 		}
 		#header-image-wrapper-1 {
-			background-image:url("gfx/headImageShadow480.png");
+			background-image:url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/headImageShadow480.png");
 			padding-bottom: 2px;	
 		}
 	}
@@ -535,7 +551,7 @@ img#siteMainDynHeaderImage1 {
 			width: 290px;
 		   }
 		   #header-image-wrapper-1 {
-			background-image:url("gfx/headImageShadow320.png");
+			background-image:url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/headImageShadow320.png");
 			padding-bottom: 0px;	
 			}
 		}	
@@ -664,7 +680,7 @@ ul#nav {
 		cursor:pointer;
 		margin:6px auto;
 		z-index: 800;
-		background-image:url("gfx/icon-menu.png");
+		background-image:url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/icon-menu.png");
 		background-repeat:no-repeat;
 		background-position:top center;
 		z-index:900;
@@ -866,7 +882,7 @@ div#copyright {
 	line-height: 18px;
 	color:#fff;
 	width:95%;
-	background-image:url("gfx/copyrightBG.jpg");
+	background-image:url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/copyrightBG.jpg");
 }
 div#copyright a {
 	color: #97B40D;	
@@ -930,8 +946,9 @@ label {
 	font-size: 12px;
 	font-family: Arial, Helvetica, sans-serif;
 }
-.astrix {
-	color: #fff;	
+.astrix,
+.required:after {
+	color: #474F11;	
 }
 input[type="text"] {}
 input[type="text"]:focus {} 
@@ -955,7 +972,7 @@ input[type="submit"], input[type="reset"] {
     text-shadow: 1px 1px 1px #E4F5BB;
 	-webkit-text-shadow: 1px 1px 1px #E4F5BB;
     text-transform: uppercase;
-	background: url("gfx/phoneBG.jpg") repeat scroll 0 0 transparent;
+	background: url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/phoneBG.jpg") repeat scroll 0 0 transparent;
     border: 1px solid #B7CC59;
     box-shadow: 3px 3px 3px -2px #444;
 	-webkit-box-shadow: 3px 3px 3px -2px #444;
@@ -971,6 +988,8 @@ input[type="submit"]:active, input[type="reset"]:active{
 }
 input[type="text"], input[type="password"], input[type="email"], textarea {
     width: 92%;
+    clear: both;
+    margin-bottom: 0px;
 }
 select {
     width: 96%;
@@ -1021,7 +1040,7 @@ div.unit-calc li.unit-menu ul.unit-type li a:hover {
 
 /* Widgets */
 .widget-element {clear:left !important;}
-.widget-wrapper {}
+.widget-wrapper {margin: 10px 15px !important;}
 .widget-title {}
 .widget-body {}
 .diy-widget {min-height:30px;}
@@ -1119,7 +1138,7 @@ div.unit-calc li.unit-menu ul.unit-type li a:hover {
     text-shadow: 1px 1px 1px #E4F5BB;
 	-webkit-text-shadow: 1px 1px 1px #E4F5BB;
     text-transform: uppercase;
-	background: url("gfx/phoneBG.jpg") repeat scroll 0 0 transparent;
+	background: url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/phoneBG.jpg") repeat scroll 0 0 transparent;
     border: 1px solid #B7CC59;
     box-shadow: 3px 3px 3px -2px #444;
 	-webkit-box-shadow: 3px 3px 3px -2px #444;
@@ -1176,7 +1195,7 @@ div.widget-button:hover{
 	height: 46px;
 	display: block;
 	margin-bottom: 7px;
-	background: #ddd url("gfx/back-to-top.png") no-repeat center center;
+	background: #ddd url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/back-to-top.png") no-repeat center center;
 	/* rounded corners */
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
@@ -1258,7 +1277,7 @@ a.m-click-phone span, a.m-click-mail span, a.m-click-map span {
 	overflow:hidden;
 	text-align:center;
 	margin:0 auto;
-	background-image: url("gfx/mobile-panel-icons.png");
+	background-image: url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/mobile-panel-icons.png");
 	background-repeat:no-repeat;
 	display:block;
 	padding:0px;
@@ -1575,10 +1594,17 @@ li.checkboxPaymentMethod {
 }
 div.Events_item {
 	padding: 0;
+	margin: 0 10px 15px;
 }
-#FAQ_category_list li a,
-#FAQ_category_list li a:visited {
-    width:100%; 
+.Events_item_desc {
+	margin-top: 5px;
+}
+div#Events_full_item {
+	margin: 0 15px;
+}
+#FAQ_category_list > li > a,
+#FAQ_category_list > li > a:visited {
+    width:auto; 
 	height:auto; 
 	text-align:center;  
 	z-index:1001;
@@ -1593,17 +1619,17 @@ div.Events_item {
     text-shadow: 1px 1px 1px #E4F5BB;
 	-webkit-text-shadow: 1px 1px 1px #E4F5BB;
     text-transform: uppercase;
-	background: url("gfx/phoneBG.jpg") repeat scroll 0 0 transparent;
+	background: url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/phoneBG.jpg") repeat scroll 0 0 transparent;
     border: 1px solid #B7CC59;
     box-shadow: 3px 3px 3px -2px #444;
 	-webkit-box-shadow: 3px 3px 3px -2px #444;
 }
-#FAQ_category_list li a:hover,
-#FAQ_category_list li a:focus,
-#FAQ_category_list li a:active {
+#FAQ_category_list > li > a:hover,
+#FAQ_category_list > li > a:active {
 	cursor:pointer;
 	border-color: #226608;
 	color: #55993a;
+	background: url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/phoneBG.jpg") repeat scroll 0 0 transparent;
 }
 ul#FAQ_category_list span {
 	margin: 0 12px 24px;
@@ -1623,23 +1649,21 @@ ul#FAQ_category_list span p span {
 	
 /* end dark background module fixes */
 
-.jobs-title,
-.jobs-title:hover {
+.jobs-title, .jobs-title:hover, .jobs-title a, .jobs-title a:hover, .jobs-title a:visited {
     background: none;
     border: none;
         font-family: "Avenir Light", Arial, Helvetica, sans-serif; /* replace with theme fonts */
         font-size: 24px;
         padding-left: 0px;
-        color: #474f11; /* replace with theme color */
+        color: #474f11 !important; /* replace with theme color */
 }
 .jobs-title a:hover,
-.jobs-title a:focus,
 .jobs-title a:active {
 	text-decoration: underline;
 }
 
 .jobs-apply a {
-    background-color: #226608; /* replace with theme color */
+    background: url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/phoneBG.jpg") repeat scroll 0 0 transparent;
     border-radius: 5px;
 	-moz-border-radius:5px;
     -webkit-border-radius:5px;
@@ -1654,11 +1678,12 @@ ul#FAQ_category_list span p span {
     border: 1px solid #B7CC59;
 }
 .jobs-apply a:hover,
-.jobs-apply a:active,
-.jobs-apply a:focus {
+.jobs-apply a:active {
+	background: url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/phoneBG.jpg") repeat scroll 0 0 transparent;
     cursor:pointer;
 	border-color: #226608;
 	color: #55993a;
+	text-decoration: none;
 }
 
 /* --------------- end Websplanet module fixes --------------- */
@@ -1669,11 +1694,13 @@ ul#FAQ_category_list span p span {
 */	-webkit-box-shadow:  0px 2px 4px 2px rgba(37, 37, 37, 0.35);
     box-shadow:  0px 2px 4px 2px rgba(37, 37, 37, 0.35);
 	width:100%;
-	background: transparent url("gfx/coverBG2.jpg") no-repeat left top;
+	background: transparent url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/coverBG2.jpg") no-repeat left top;
 	background-size: cover;
 	overflow: hidden;
 }
-	
+#wrapper-cta {
+	min-height: 45px;
+}
 .wrapper-cta-pos	{
 	position:absolute !important;
 	padding:0px 0px 0px;
@@ -1721,12 +1748,12 @@ ul#FAQ_category_list span p span {
 	border: 1px solid;
 }
 .callout1 {
-	background-image: url("gfx/ieCallout1BG.png")\9;
+	background-image: url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/ieCallout1BG.png")\9;
 	background-color: rgba(87, 150, 7, 0.55);
 	border-color: #74a520 #2e4011 #0c1901  #6c8939;
 }
 .callout2 {
-	background-image: url("gfx/ieCallout2BG.png")\9;
+	background-image: url("http://default-health-wellness.stage-sites.yp.com/templates/bubbles/templates_YPwebsites/styles/m_d/d7/d70/370/gfx/ieCallout2BG.png")\9;
 	background-color: rgba(255, 115, 0, 0.55);
 	border-color: #cca631 #170c00 #411f00  #bb9531;
 }
@@ -1747,7 +1774,9 @@ div.horizontal.callouts div.vertical div.diy-f-spot.callout2 div.diy-f-spot-inne
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;
 }	
-	 
+.pageTitle {
+	margin: 10px 15px 0;
+}	 
 @media screen and (max-width: 767px) {
 	div.horizontal.callouts div.vertical div.diy-f-spot.callout1 div.diy-f-spot-inner div.widget-wrapper,
 	div.horizontal.callouts div.vertical div.diy-f-spot.callout2 div.diy-f-spot-inner div.widget-wrapper {
@@ -1755,6 +1784,9 @@ div.horizontal.callouts div.vertical div.diy-f-spot.callout2 div.diy-f-spot-inne
 		float:left !important;
 		margin-right: 15px !important;
 		color: #fff;
+	}
+	.pageTitle {
+		text-align: center;
 	}
 }
 @media only screen and (max-width: 479px) {
